@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Anti-Phishing Extension",
+  "description": "Anti-Phishing Extension Project for KIT325",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js":  ["assets/src/content.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "assets/img/icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Anti-Phishing Tool"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
